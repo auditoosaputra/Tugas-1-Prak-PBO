@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class TugasBalokTabung {
 
     public static void main(String[] args) {
-        boolean ulang = true;
-        int menu;
+        boolean loop = true;
+        int menu, ulang;
         double panjang, lebar, tinggi, jarijari;
         Scanner program = new Scanner(System.in);
         
-        while(ulang){
+        while(loop){
             System.out.println("==========");
             System.out.println("Menu Utama");
             System.out.println("==========");
@@ -36,9 +36,9 @@ public class TugasBalokTabung {
                     System.out.println("Volume Balok : " + block.hitungvolume());
                     System.out.println("Luas Permukaan Balok : " + block.hitungluaspermukaan());
                     System.out.print("Kembali ke menu? (Ya: 1 || Tidak: 0)");
-                    menu = program.nextInt();
-                    if(menu != 1){
-                        ulang = false;
+                    ulang = program.nextInt();
+                    if(ulang != 1){
+                        loop = false;
                     }
                     break;
                 case 2 : 
@@ -53,25 +53,25 @@ public class TugasBalokTabung {
                     System.out.println("Volume Tabung : " + tube.hitungvolume());
                     System.out.println("Luas Permukaan Tabung : " + tube.hitungluaspermukaan());
                     System.out.print("Kembali ke menu? (Ya: 1 || Tidak: 0)");
-                    menu = program.nextInt();
-                    if(menu != 1){
-                        ulang = false;
+                    ulang = program.nextInt();
+                    if(ulang != 1){
+                        loop = false;
                     }
                     break;
                 case 0 :
-                    ulang = false;
+                    loop = false;
                     break;
                 default :
                     System.out.println("Menu yang Anda pilih tidak tersedia!");
                     System.out.print("Kembali ke menu? (Ya: 1 || Tidak: 0)");
-                    menu = program.nextInt();
-                    if(menu != 1){
-                        ulang = false;
+                    ulang = program.nextInt();
+                    if(ulang != 1){
+                        loop = false;
                     }
                     break;
             }
         }
-        System.out.println("Program berakhir...1");
+        System.out.println("Program berakhir...");
         program.close();
     }
 }

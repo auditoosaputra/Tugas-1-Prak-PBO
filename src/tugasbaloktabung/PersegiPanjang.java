@@ -1,7 +1,7 @@
 package tugasbaloktabung;
 
 public class PersegiPanjang implements MenghitungBidang{
-    double panjang, lebar;
+    private double panjang, lebar;
 
     public PersegiPanjang(double panjang, double lebar) {
         this.panjang = panjang;

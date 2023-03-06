@@ -1,7 +1,7 @@
 package tugasbaloktabung;
 
 public class Lingkaran implements MenghitungBidang{
-    double jarijari;
+    private double jarijari;
 
     public Lingkaran(double jarijari) {
         this.jarijari = jarijari;
